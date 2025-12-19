@@ -1,0 +1,194 @@
+﻿﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>HW2</title>
+    <style>
+        .roman-ol {
+            list-style: upper-roman;
+            font-weight: bold;
+        }
+
+            .roman-ol li:nth-child(1) {
+                color: red;
+            }
+
+            .roman-ol li:nth-child(2) {
+                color: orange
+            }
+
+            .roman-ol li:nth-child(3) {
+                color: green;
+            }
+
+            .roman-ol li:nth-child(4) {
+                color: skyblue;
+            }
+
+            .roman-ol li:nth-child(5) {
+                color: mediumpurple;
+            }
+
+        .alpha-ol {
+            list-style: lower-alpha;
+        }
+
+            .alpha-ol li:nth-child(n) {
+                color: black;
+            }
+
+        .blue-ul {
+            list-style: circle;
+        }
+
+            .blue-ul li::marker {
+                color: blue;
+            }
+
+        .red-ul {
+            list-style: circle;
+        }
+
+            .red-ul li::marker {
+                color: red;
+            }
+
+        .check-green-ul {
+            list-style: none;
+        }
+
+            .check-green-ul li {
+                padding-left: 10px;
+            }
+
+                .check-green-ul li::marker {
+                    content: '✓';
+                    color: green;
+                }
+
+        .check-purple-ul {
+            list-style: none;
+        }
+
+            .check-purple-ul li {
+                padding-left: 10px;
+            }
+
+                .check-purple-ul li::marker {
+                    content: '✓';
+                    color: mediumpurple;
+                }
+
+        .cross-ul {
+            list-style: none;
+        }
+
+            .cross-ul li {
+                padding-left: 10px;
+            }
+
+                .cross-ul li::marker {
+                    content: '×';
+                    color: black
+                }
+    </style>
+</head>
+<body>
+    <ol class="roman-ol">
+        <li>
+            Photoshop
+            <ol class="alpha-ol">
+                <li>Интерфейс</li>
+                <li>Эффекты</li>
+                <li>Инструменты</li>
+                <li>Практика</li>
+            </ol>
+        </li>
+        <li>
+            Illustrator
+            <ol class="alpha-ol">
+                <li>Интерфейс</li>
+                <li>Инструменты</li>
+                <li>Практика</li>
+            </ol>
+        </li>
+        <li>
+            Верстка
+            <ol class="alpha-ol">
+                <li>
+                    XHTML
+                    <ul class="blue-ul">
+                        <li>Основы</li>
+                        <li>
+                            Способы верстки:
+                            <ul class="check-green-ul">
+                                <li>Таблицы</li>
+                                <li>Фреймы</li>
+                                <li>Верстка тэгами div</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    CSS
+                    <ul class="blue-ul">
+                        <li>Основы</li>
+                        <li>Перечень свойств</li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+        <li>
+            Flash
+            <ol class="alpha-ol">
+                <li>Анимация</li>
+                <li>Action script</li>
+            </ol>
+        </li>
+        <li>
+            CMS
+            <ol class="alpha-ol">
+                <li>
+                    WordPress
+                    <ul class="red-ul">
+                        <li>Установка</li>
+                        <li>
+                            Основы работы:
+                            <ul class="check-purple-ul">
+                                <li>Интерфейс</li>
+                                <li>Шаблоны</li>
+                                <li>Контент</li>
+                                <li>Плагины</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Joomla
+                    <ul class="red-ul">
+                        <li>Установка</li>
+                        <li>
+                            Основы работы:
+                            <ul class="check-purple-ul">
+                                <li>Интерфейс</li>
+                                <li>Шаблоны</li>
+                                <li>Контент</li>
+                                <li>
+                                    Расширения:
+                                    <ul class="cross-ul">
+                                        <li>Компоненты</li>
+                                        <li>Модули</li>
+                                        <li>Плагины</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+    </ol>
+</body>
+</html>
