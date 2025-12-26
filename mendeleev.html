@@ -1,0 +1,285 @@
+﻿﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Таблица Мнеделеева</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .table-left {
+            flex: 1;
+        }
+
+        table {
+            border: solid 2px;
+            text-align: center;
+        }
+
+        td {
+            border: solid 1px;
+            height: 60px;
+        }
+
+        td {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .table-left td::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: black;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        td:hover::after {
+            opacity: 1;
+        }
+
+        .nonmetals {
+            background-color: aquamarine;
+        }
+
+        .alkali-metals {
+            background-color: tomato;
+        }
+
+        .alkaline-earth-metals {
+            background-color: bisque;
+        }
+
+        .lanthanoids {
+            background-color: hotpink;
+        }
+
+        .actinides {
+            background-color: pink;
+        }
+
+        .transition-metals {
+            background-color: lightcoral;
+        }
+
+        .post-transition-metals {
+            background-color: silver;
+        }
+
+        .semimetals {
+            background-color: darkkhaki;
+        }
+
+        .halogens {
+            background-color: yellow;
+        }
+
+        .noble-gases {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <br /><br />
+    <div class="container">
+        <table class="table-left">
+            <tr>
+                <td data-tooltip="Период/Группа"></td>
+                <td data-tooltip="Группа">1</td>
+                <td data-tooltip="Группа">2</td>
+                <td data-tooltip="Группа">3</td>
+                <td data-tooltip="Группа">4</td>
+                <td data-tooltip="Группа">5</td>
+                <td data-tooltip="Группа">6</td>
+                <td data-tooltip="Группа">7</td>
+                <td data-tooltip="Группа">8</td>
+                <td data-tooltip="Группа">9</td>
+                <td data-tooltip="Группа">10</td>
+                <td data-tooltip="Группа">11</td>
+                <td data-tooltip="Группа">12</td>
+                <td data-tooltip="Группа">13</td>
+                <td data-tooltip="Группа">14</td>
+                <td data-tooltip="Группа">15</td>
+                <td data-tooltip="Группа">16</td>
+                <td data-tooltip="Группа">17</td>
+                <td data-tooltip="Группа">18</td>
+            </tr>
+            <tr>
+                <td data-tooltip="Период">1</td>
+                <td class="nonmetals" data-tooltip="Водород 1,00797">1<br />H</td>
+                <td colspan="16"></td>
+                <td class="noble-gases" data-tooltip="Гелий 4,0026">2<br />He</td>
+            </tr>
+            <tr>
+                <td data-tooltip="Период">2</td>
+                <td class="alkali-metals" data-tooltip="Литий 6,393">3<br />Li</td>
+                <td class="alkaline-earth-metals" data-tooltip="Берилий 9,0122">4<br />Be</td>
+                <td colspan="10"></td>
+                <td class="semimetals" data-tooltip="Бор 10,811">5<br />B</td>
+                <td class="nonmetals" data-tooltip="Углерод 12,01115">6<br />C</td>
+                <td class="nonmetals" data-tooltip="Азот 14,0067">7<br />N</td>
+                <td class="nonmetals" data-tooltip="Кислород 15,9994">8<br />O</td>
+                <td class="halogens" data-tooltip="Фтор 18,9984">9<br />F</td>
+                <td class="noble-gases" data-tooltip="Неон 20,179">10<br />Ne</td>
+            </tr>
+            <tr>
+                <td data-tooltip="Период">3</td>
+                <td class="alkali-metals" data-tooltip="Натрий 22,9898">11<br />Na</td>
+                <td class="alkaline-earth-metals" data-tooltip="Магний 24,305">12<br />Mg</td>
+                <td colspan="10"></td>
+                <td class="post-transition-metals" data-tooltip="Алюминий 26,9815">13<br />Al</td>
+                <td class="semimetals" data-tooltip="Крмений 28,086">14<br />Si</td>
+                <td class="nonmetals" data-tooltip="Фосфор 90,9738">15<br />P</td>
+                <td class="nonmetals" data-tooltip="Сера 32,064">16<br />S</td>
+                <td class="halogens" data-tooltip="Хлор 35,453">17<br />Cl</td>
+                <td class="noble-gases" data-tooltip="Аргно 39,948">18<br />Ar</td>
+            </tr>
+            <tr>
+                <td data-tooltip="Период">4</td>
+                <td class="alkali-metals" data-tooltip="Калий 39,102">19<br />K</td>
+                <td class="alkaline-earth-metals" data-tooltip="Кальций 40,08">20<br />Ca</td>
+                <td class="transition-metals" data-tooltip="Скандий 44,956">21<br />Sc</td>
+                <td class="transition-metals" data-tooltip="Титан 47,90">22<br />Ti</td>
+                <td class="transition-metals" data-tooltip="Ванадий 50,942">23<br />V</td>
+                <td class="transition-metals" data-tooltip="Хром 51,996">24<br />Cr</td>
+                <td class="transition-metals" data-tooltip="Марганец 54,9380">25<br />Mn</td>
+                <td class="transition-metals" data-tooltip="Железо 55,847">26<br />Fe</td>
+                <td class="transition-metals" data-tooltip="Кобальт 58,9330">27<br />Co</td>
+                <td class="transition-metals" data-tooltip="Никель 58,71">28<br />Ni</td>
+                <td class="transition-metals" data-tooltip="Медь 63,546">29<br />Cu</td>
+                <td class="transition-metals" data-tooltip="Цинк 65,37">30<br />Zn</td>
+                <td class="post-transition-metals" data-tooltip="Галлий 69,72">31<br />Ga</td>
+                <td class="semimetals" data-tooltip="Германий 72,59">32<br />Ge</td>
+                <td class="semimetals" data-tooltip="Мышьяк 74,9216">33<br />As</td>
+                <td class="nonmetals" data-tooltip="Селен 78,96">34<br />Se</td>
+                <td class="halogens" data-tooltip="Бром 79,904">35<br />Br</td>
+                <td class="noble-gases" data-tooltip="Криптон 83,80">36<br />Kr</td>
+            </tr>
+            <tr>
+                <td data-tooltip="Период">5</td>
+                <td class="alkali-metals" data-tooltip="Рубидий 85,47">37<br />Rb</td>
+                <td class="alkaline-earth-metals" data-tooltip="Стронций 87,62">38<br />Sr</td>
+                <td class="transition-metals" data-tooltip="Иттрий 88,905">39<br />Y</td>
+                <td class="transition-metals" data-tooltip="Цирконий 91,22">40<br />Zr</td>
+                <td class="transition-metals" data-tooltip="Ниобий 92,906">41<br />Nb</td>
+                <td class="transition-metals" data-tooltip="Молибден 95,94">42<br />Mo</td>
+                <td class="transition-metals" data-tooltip="Технеций [99]">43<br />Tc</td>
+                <td class="transition-metals" data-tooltip="Рутений 101,07">44<br />Ru</td>
+                <td class="transition-metals" data-tooltip="Родий 102,905">45<br />Rh</td>
+                <td class="transition-metals" data-tooltip="Паладий 106,4">46<br />Pd</td>
+                <td class="transition-metals" data-tooltip="Серебро 107,868">47<br />Ag</td>
+                <td class="transition-metals" data-tooltip="Кадмий 112,40">48<br />Cd</td>
+                <td class="post-transition-metals" data-tooltip="Индий 114,82">49<br />In</td>
+                <td class="post-transition-metals" data-tooltip="Олово 118,69">50<br />Sn</td>
+                <td class="semimetals" data-tooltip="Сурьма 121,75">51<br />Sb</td>
+                <td class="semimetals" data-tooltip="Теллур 127,60">52<br />Te</td>
+                <td class="halogens" data-tooltip="Иод 126,9044">53<br />I</td>
+                <td class="noble-gases" data-tooltip="Ксенон 131,30">54<br />Xe</td>
+            </tr>
+            <tr>
+                <td data-tooltip="Период">6</td>
+                <td class="alkali-metals" data-tooltip="Цезий 132,905">55<br />Cs</td>
+                <td class="alkaline-earth-metals" data-tooltip="Барий 137,34">56<br />Ba</td>
+                <td class="lanthanoids" data-tooltip="Латаноиды"></td>
+                <td class="transition-metals" data-tooltip="Гафий 187,49">72<br />Hf</td>
+                <td class="transition-metals" data-tooltip="Тантал 180,948">73<br />Ta</td>
+                <td class="transition-metals" data-tooltip="Вольфрам 183,85">74<br />W</td>
+                <td class="transition-metals" data-tooltip="Рений 186,2">75<br />Re</td>
+                <td class="transition-metals" data-tooltip="Осмий 190,2">76<br />Os</td>
+                <td class="transition-metals" data-tooltip="Иридий 192,2">77<br />Ir</td>
+                <td class="transition-metals" data-tooltip="Платина 195,09">78<br />Pt</td>
+                <td class="transition-metals" data-tooltip="Золото 196,967">79<br />Au</td>
+                <td class="transition-metals" data-tooltip="Ртуть 200,59">80<br />Hg</td>
+                <td class="post-transition-metals" data-tooltip="Таллий 204,37">81<br />Tl</td>
+                <td class="post-transition-metals" data-tooltip="Свинец 207,19">82<br />Pb</td>
+                <td class="post-transition-metals" data-tooltip="Висмут 208,980">83<br />Bi</td>
+                <td class="semimetals" data-tooltip="Полоний [210]">84<br />Po</td>
+                <td class="halogens" data-tooltip="Астат [210]">85<br />At</td>
+                <td class="noble-gases" data-tooltip="Радон [222]">86<br />Rn</td>
+            </tr>
+            <tr>
+                <td data-tooltip="Период">7</td>
+                <td class="alkali-metals" data-tooltip="Франций [223]">87<br />Fr</td>
+                <td class="alkaline-earth-metals" data-tooltip="Радий [226]">88<br />Ra</td>
+                <td class="actinides" data-tooltip="Актиноиды"></td>
+                <td class="transition-metals" data-tooltip="Резерфордий [261]">104<br />Rf</td>
+                <td class="transition-metals" data-tooltip="Дубий [262]">105<br />Db</td>
+                <td class="transition-metals" data-tooltip="Сиборгий [263]">106<br />Sg</td>
+                <td class="transition-metals" data-tooltip="Борий [262]">107<br />Bh</td>
+                <td class="transition-metals" data-tooltip="Хассий [265]">108<br />Hs</td>
+                <td class="transition-metals" data-tooltip="Майтнерий [266]">109<br />Mt</td>
+                <td class="transition-metals" data-tooltip="Дармштадий [271]">110<br />Ds</td>
+                <td class="transition-metals" data-tooltip="Рентгений [272]">111<br />Rg</td>
+                <td class="transition-metals" data-tooltip="Коперниций [285]">112<br />Cn</td>
+                <td class="post-transition-metals" data-tooltip="Нихоний [286]">113<br />Nh</td>
+                <td class="post-transition-metals" data-tooltip="Флеровий">114<br />Fl</td>
+                <td class="post-transition-metals" data-tooltip="Московий">115<br />Mc</td>
+                <td class="post-transition-metals" data-tooltip="Ливерморий">116<br />Lv</td>
+                <td class="halogens" data-tooltip="Теннессин">117<br />Ts</td>
+                <td class="noble-gases" data-tooltip="Оганесон [294]">118<br />Og</td>
+            </tr>
+            <tr>
+                <td colspan="4" data-tooltip="Латаноиды">Латаноиды:</td>
+                <td class="lanthanoids" data-tooltip="Лантан 138,91">57<br />La</td>
+                <td class="lanthanoids" data-tooltip="Церий 140,12">58<br />Ce</td>
+                <td class="lanthanoids" data-tooltip="Празеодим 170,907">59<br />Pr</td>
+                <td class="lanthanoids" data-tooltip="Неодим 144,24">60<br />Nd</td>
+                <td class="lanthanoids" data-tooltip="Прометий [147]">61<br />Pm</td>
+                <td class="lanthanoids" data-tooltip="Самарий 150,35">62<br />Sm</td>
+                <td class="lanthanoids" data-tooltip="Европий 151,96">63<br />Eu</td>
+                <td class="lanthanoids" data-tooltip="Гадолиний 157,25">64<br />Gd</td>
+                <td class="lanthanoids" data-tooltip="Тербий 158,924">65<br />Tb</td>
+                <td class="lanthanoids" data-tooltip="Диспрозий 162,50">66<br />Dy</td>
+                <td class="lanthanoids" data-tooltip="Гольмий 164,930">67<br />Ho</td>
+                <td class="lanthanoids" data-tooltip="Эрбий 167,26">68<br />Er</td>
+                <td class="lanthanoids" data-tooltip="Тулий 168,934">69<br />Tm</td>
+                <td class="lanthanoids" data-tooltip="Итербий 173,04">70<br />Yb</td>
+                <td class="lanthanoids" data-tooltip="Лютеций 174,97">71<br />Lu</td>
+            </tr>
+            <tr>
+                <td colspan="4" data-tooltip="Актиноиды">Актиноиды:</td>
+                <td class="actinides" data-tooltip="Актиний [227]">89<br />Ac</td>
+                <td class="actinides" data-tooltip="Торий 232,038">90<br />Th</td>
+                <td class="actinides" data-tooltip="Протактиний [231]">91<br />Pa</td>
+                <td class="actinides" data-tooltip="Уран 238,03">92<br />U</td>
+                <td class="actinides" data-tooltip="Нептуний [237]">93<br />Np</td>
+                <td class="actinides" data-tooltip="Плутоний [244]">94<br />Pu</td>
+                <td class="actinides" data-tooltip="Амерций [243]">95<br />Am</td>
+                <td class="actinides" data-tooltip="Кюрий [247]">96<br />Cm</td>
+                <td class="actinides" data-tooltip="Берклий [247]">97<br />Bk</td>
+                <td class="actinides" data-tooltip="Калифорний [252]">98<br />Cf</td>
+                <td class="actinides" data-tooltip="Эйнштейний [254]">99<br />Es</td>
+                <td class="actinides" data-tooltip="Фермий [257]">100<br />Fm</td>
+                <td class="actinides" data-tooltip="Менделевий [257]">101<br />Md</td>
+                <td class="actinides" data-tooltip="Нобелий [255]">102<br />No</td>
+                <td class="actinides" data-tooltip="Лоуренсий [256]">103<br />Lr</td>
+            </tr>
+        </table>
+        <table class="table-right">
+            <tr><td class="nonmetals">Неметаллы</td></tr>
+            <tr><td class="alkali-metals">Щелочные металлы</td></tr>
+            <tr><td class="alkaline-earth-metals">Щелочноземельные металлы</td></tr>
+            <tr><td class="lanthanoids">Латаноиды</td></tr>
+            <tr><td class="actinides">Актиноиды</td></tr>
+            <tr><td class="transition-metals">Переходные металлы</td></tr>
+            <tr><td class="post-transition-metals">Постпереходные металлы</td></tr>
+            <tr><td class="semimetals">Полуметаллы</td></tr>
+            <tr><td class="halogens">Галогены</td></tr>
+            <tr><td class="noble-gases">Благородные газы</td></tr>
+        </table>
+    </div>
+</body>
+</html>
