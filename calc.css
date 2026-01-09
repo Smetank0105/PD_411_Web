@@ -1,133 +1,92 @@
-﻿body {
-    background-image: url("bliss.jpg");
-    background-size: cover;
-    font-family: Tahoma;
-    text-shadow: 1px 1px black;
+﻿body
+{
+    background-image:url("bliss.jpg");
+    background-size:cover;
+    font-family:Tahoma;
+    text-shadow:1px 1px black;
 }
 
-.main-window {
-    border: solid 1px;
-    width: 400px;
-    height: 360px;
-    position: absolute;
-    left: 25px;
-    top: 25px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
+.main-window
+{
+    /*border:solid 1px;*/
+    width:400px;
+    height:360px;
+    position:absolute;
+    left:25px;
+    top:25px;
 
-button {
-    background-color:whitesmoke;
-    color:blue;
-    border: solid 1px blue;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
+    border-top-left-radius:8px;
+    border-top-right-radius:8px;
 }
-
 .title-bar {
     width: 100%;
     height: 38px;
-    background-color: blue;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    /*background-color:blue;*/
+    background-image: linear-gradient(
+        rgb(38,132,244),
+        rgb(0,86,228),rgb(0,86,228),rgb(0,86,228), 
+        rgb(4,105,253),rgb(4,105,253),rgb(4,105,253)
+        );
+    box-shadow:inset 0px 0px 4px 1px #002195;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-.title-bar-left-side {
-    display: flex;
+.title-bar-left-side
+{
+    margin: 0px 8px;
+    display:flex;
 }
-
-#app-icon {
+.title-bar-right-side
+{
+    margin: 0px 8px;
+}
+#app-icon
+{
+    width:24px;
+    height:24px;
+}
+.control-button, .control-button:disabled, .control-button:disabled:hover {
     width: 24px;
     height: 24px;
-}
-
-.title-bar button {
-    width: 24px;
-    height: 24px;
-}
-
-#min-size, #max-size, #exit {
-    background-color: blue;
     color: white;
-    border: solid 2px white;
-}
-
-#max-size {
-    color: grey;
-}
-
-#exit {
-    background-color: red;
-}
-
-.client-rect {
-    width: 100%-10px;
-    height: 312px;
-    padding: 0px 10px 10px 10px;
-    background-color: rgb(235,233,216);
-}
-
-.menu > button{
-    border: none;
-    background-color: rgb(235,233,216);
-    color:black;
-}
-
-.display {
-    height: 40px;
-    background-color: white;
-    border: 2px inset #c3c3c3;
-    margin-bottom: 10px;
-    text-align: right;
-    font-size: 20px;
-    white-space: nowrap;
-}
-
-.top-client-buttons {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 8px;
-}
-
-.null-rect {
+    font-weight: 800;
     border: solid 1px white;
-    width: 40px;
-    height: 40px;
-    box-shadow: 1px 1px inset grey;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom right, #55A1FF, #0025B5);
+    box-shadow: inset 1px 1px 3px 0px #77A1F5;
 }
-
-.backspace-ce-c {
-    height: 40px;
-    width: 96px;
-    color: red;
+.control-button:hover{
+    background-image:linear-gradient(to bottom right, #75C1FF, #2045D5);
+    box-shadow:inset 0px 0px 3px 3px #77A1F5;
 }
-
-.bottom-client-buttons {
-    display: flex;
-    justify-content: space-between;
+.control-button:active{
+    background-image:linear-gradient(to bottom right, #55A1CF, #0025B5);
+    box-shadow:inset 0px 0px 3px 3px #5781F5;
+    color:lightgray;
 }
-
-.bottom-client-buttons button {
-    height: 40px;
-    width: 56px;
-    margin-top: 5px;
+    .control-button:disabled, .control-button:disabled:hover {
+        color: lightgray;
+        border-color: lightgray;
+    }
+#close-button{
+    background-image:linear-gradient(to bottom right, #C97475, #FF3010);
+    box-shadow:inset 3px 1px 3px 1px #C49A9B;
 }
-
-.memory-buttons {
-    display: flex;
-    flex-direction: column;
-}
-
-.red {
-    color: red;
-}
-
-blue {
-    color:blue;
+    #close-button:hover {
+        background-image: linear-gradient(to bottom right, #D98485, #FF3020);
+        box-shadow:inset 0px 0px 3px 3px #C49A9B;
+    }
+    #close-button:active {
+        background-image: linear-gradient(to bottom right, #D95455, #FF3020);
+        box-shadow:inset 0px 0px 3px 3px #B48A8B;
+    }
+.client-rect
+{
+    background-color:rgb(235,233,216);
+    width:100%;
+    height:322px;
 }
