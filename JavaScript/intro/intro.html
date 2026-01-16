@@ -16,6 +16,15 @@
 
 	<details>
 		<summary>Power</summary>
+        <input type="number" id="power-source-digit" placeholder="Исходное число для вычисления степени" onchange="Power()"/>
+        <input type="number" id="power-source-exp" placeholder="Степень возведения" onchange="Power()"/>
+        <div id="power-result"></div>
+	</details>
+
+    <details>
+		<summary>Fibonacci</summary>
+		<input type="number" min="0" id="fibonacci-source" placeholder="Предел ряда Фибоначчи" onchange="Fibonacci()"/>
+        <div id="fibonacci-result"></div>
 	</details>
 
 	<script src="script.js"></script>
