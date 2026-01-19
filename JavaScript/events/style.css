@@ -3,9 +3,6 @@
 body {
 	font-family: Roboto Condensed;
 	font-size: 22px;
-	/*background-color:lightskyblue;*/
-	background-image: linear-gradient(lightskyblue, pink);
-	background-attachment: fixed;
 }
 
 input {
@@ -23,11 +20,19 @@ summary {
 	color: #c8c8c8;
 }
 
+	.dark #switch-background {
+		background-image:url("img/sun.png");
+		filter:brightness(0) invert(1);
+	}
+
 .white {
-	background-image: linear-gradient(lightskyblue, pink);
-	background-attachment: fixed;
+	background-color: #C8C8C8;
 	color: black;
 }
+
+	.white #switch-background {
+		background-image:url("img/moon.png");
+	}
 
 #header {
 	display: flex;
@@ -38,6 +43,7 @@ summary {
 #switch-background {
 	width: 32px;
 	height: 32px;
+	background-size: 32px 32px;
 }
 
 #photo-and-color {

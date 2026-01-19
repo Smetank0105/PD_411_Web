@@ -17,9 +17,8 @@ function setBackground() {
 }
 
 function switchBackground() {
-	let target = document.getElementById("switch-background").src;
-	let path = target.split('/');
-	let file = path[path.length - 1];
-	document.body.className = file === "moon.png" ? "dark" : "white";
-	document.getElementById("switch-background").src = `img/${file === "moon.png" ? "sun" : "moon"}.png`;
+	let delay = document.getElementById('delay').value;
+	document.body.style.transition = `all ${delay}s ease`;
+	document.getElementById('switch-background').style.transition = `all ${delay}s ease`;
+	document.body.className = document.body.className === 'dark' ? 'white' : 'dark';
 }
