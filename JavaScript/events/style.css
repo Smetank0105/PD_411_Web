@@ -75,8 +75,8 @@ summary {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("img/clock.png");
-    background-color: black;
+    background: url("img/clock2.png");
+    background-color: lightsalmon;
     background-size: cover;
     border-radius: 50%;
 }
@@ -131,7 +131,7 @@ summary {
         position: absolute;
         width: 4px;
         height: 90px;
-        background-color: white;
+        background-color: black;
         z-index: 11;
         border-radius: 6px 6px 0 0;
     }
@@ -141,7 +141,7 @@ summary {
         position: absolute;
         width: 2px;
         height: 150px;
-        background-color: white;
+        background-color: red;
         z-index: 12;
         border-radius: 6px 6px 0 0;
     }
