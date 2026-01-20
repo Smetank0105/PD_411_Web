@@ -53,5 +53,25 @@ document.body.onload = function tick_timer()
 	document.getElementById('current-date').style.visibility = document.getElementById('show-date').checked ? 'visible' : 'hidden';
 	document.getElementById('day-of-week').style.visibility = document.getElementById('show-weekday').checked ? 'visible' : 'hidden';
 
+	setClock();
+
 	setTimeout(tick_timer, 100);
+}
+
+/////////////////////////////////////////////////////////////////////////
+function setClock() {
+	let h = document.getElementById('my-h');
+	let m = document.getElementById('my-m');
+	let s = document.getElementById('my-s');
+
+	let day = new Date();
+	let hh = day.getHours() * 30;
+	let mm = day.getMinutes() * 6;
+	let ss = day.getSeconds() * 6;
+
+	h.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+	m.style.transform = `rotateZ(${mm}deg)`;
+	s.style.transform = `rotateZ(${ss}deg)`;
+
+	document.getElementById('my-clock').style.visibility = document.getElementById('show-my-clock').checked ? 'visible' : 'hidden';
 }
