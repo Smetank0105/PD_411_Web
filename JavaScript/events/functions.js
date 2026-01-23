@@ -105,9 +105,26 @@ function tickCountdown() {
 	const SECONDS_PER_WEEK = SECONDS_PER_DAY * 7;
 	const DAYS_PER_MONTH = 365.25 / 12;
 	const SECONDS_PER_MONTH = SECONDS_PER_DAY * DAYS_PER_MONTH;
-	const SCONDS_PER_YEAR = SECONDS_PER_DAY * 365 + SECONDS_PER_HOUR * 6;
+	const SECONDS_PER_YEAR = SECONDS_PER_DAY * 365 + SECONDS_PER_HOUR * 6;
 
+	let yearValue = Math.trunc(timestamp / SECONDS_PER_YEAR);
+	let temp = timestamp % SECONDS_PER_YEAR;
+	let monthValue = Math.trunc(temp / SECONDS_PER_MONTH);
+	temp %= SECONDS_PER_MONTH;
+	let dayValue = Math.trunc(temp / SECONDS_PER_DAY);
+	temp %= SECONDS_PER_DAY;
+	let hourValue = Math.trunc(temp / SECONDS_PER_HOUR);
+	temp %= SECONDS_PER_HOUR;
+	let minuteValue = Math.trunc(temp / SECONDS_PER_MINUTE);
+	temp %= SECONDS_PER_MINUTE;
+	let secondValue = temp;
 
+	document.getElementById('years-unit').innerHTML = yearValue;
+	document.getElementById('months-unit').innerHTML = monthValue;
+	document.getElementById('days-unit').innerHTML = dayValue;
+	document.getElementById('hours-unit').innerHTML = hourValue;
+	document.getElementById('minutes-unit').innerHTML = minuteValue;
+	document.getElementById('seconds-unit').innerHTML = secondValue;
 
 	setTimeout(tickCountdown, 100);
 }
