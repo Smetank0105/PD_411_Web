@@ -107,17 +107,33 @@ function tickCountdown() {
 	const SECONDS_PER_MONTH = SECONDS_PER_DAY * DAYS_PER_MONTH;
 	const SECONDS_PER_YEAR = SECONDS_PER_DAY * 365 + SECONDS_PER_HOUR * 6;
 
-	let yearValue = Math.trunc(timestamp / SECONDS_PER_YEAR);
-	let temp = timestamp % SECONDS_PER_YEAR;
-	let monthValue = Math.trunc(temp / SECONDS_PER_MONTH);
-	temp %= SECONDS_PER_MONTH;
-	let dayValue = Math.trunc(temp / SECONDS_PER_DAY);
-	temp %= SECONDS_PER_DAY;
-	let hourValue = Math.trunc(temp / SECONDS_PER_HOUR);
-	temp %= SECONDS_PER_HOUR;
-	let minuteValue = Math.trunc(temp / SECONDS_PER_MINUTE);
-	temp %= SECONDS_PER_MINUTE;
-	let secondValue = temp;
+	let yearValue = targetTimeValue.getFullYear() - now.getFullYear();
+	let monthValue = targetTimeValue.getMonth() - now.getMonth();
+	let dayValue = targetTimeValue.getDate() - now.getDate();
+	let hourValue = targetTimeValue.getHours() - now.getHours();
+	let minuteValue = targetTimeValue.getMinutes() - now.getMinutes();
+	let secondValue = targetTimeValue.getSeconds() - now.getSeconds();
+	if (secondValue < 0) {
+		minuteValue--;
+		secondValue += 60;
+    }
+	if (minuteValue < 0) {
+		hourValue--;
+		minuteValue += 60;
+    }
+	if (hourValue < 0) {
+		dayValue--;
+		hourValue += 60;
+    }
+	if (dayValue < 0) {
+		monthValue--;
+		let temp = new Date(targetTimeValue.getFullYear(), targetTimeValue.getMonth(), 0);
+		dayValue += temp.getDate();
+	}
+	if (monthValue < 0) {
+		yearValue--;
+		monthValue += 12;
+    }
 
 	document.getElementById('years-unit').innerHTML = yearValue;
 	document.getElementById('months-unit').innerHTML = monthValue;
