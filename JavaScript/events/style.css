@@ -86,9 +86,13 @@ summary {
 	height:148px;
 	color:rgb(200,0,0);
 	background-color:Highlight;
+	display:flex;
+	align-items:center;
+	justify-content:center;
 }
 .time-marker{
 	border:solid 1px;
 	background-color:darkred;
 	color:aliceblue;
+	text-align:center;
 }
