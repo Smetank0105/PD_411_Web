@@ -123,7 +123,7 @@ function tickCountdown() {
     }
 	if (hourValue < 0) {
 		dayValue--;
-		hourValue += 60;
+		hourValue += 24;
     }
 	if (dayValue < 0) {
 		monthValue--;
