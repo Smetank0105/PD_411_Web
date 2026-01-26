@@ -143,7 +143,7 @@ function tickCountdown() {
 		}
 		else years_unit.innerHTML = addLeadingZero(years);
 	}
-	else removeTimeBLock('years');
+	else removeTimeBlock('years');
 
 	let months = Math.floor(date / SECONDS_PER_MONTH);
 	if (months > 0) {
@@ -170,7 +170,7 @@ function tickCountdown() {
 		}
 		else weeks_unit.innerHTML = addLeadingZero(weeks);
 	}
-	else removeTimeBLock('weeks');
+	else removeTimeBlock('weeks');
 
 	let days = Math.floor(date / SECONDS_PER_DAY);
 	if (days > 0) {
@@ -182,7 +182,7 @@ function tickCountdown() {
 		}
 		else days_unit.innerHTML = addLeadingZero(days);
 	}
-	else removeTimeBLock('days');
+	else removeTimeBlock('days');
 
 	let hours = Math.floor(time_of_day / SECONDS_PER_HOUR);
 	if (hours > 0) time_of_day %= SECONDS_PER_HOUR;
@@ -219,7 +219,7 @@ function createTimeBlock(name, value) {
 	return time_block;
 }
 
-function removeTimeBLock(name) {
+function removeTimeBlock(name) {
 	let unit = document.getElementById(`${name}-unit`);
 	if (unit != null) {
 		let block = unit.parentElement;
