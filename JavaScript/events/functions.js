@@ -157,6 +157,32 @@ function tickCountdown() {
 		}
 		else months_unit.innerHTML = addLeadingZero(months);
 	}
+	else removeTimeBlock('months');
+
+	let weeks = Math.floor(date / SECONDS_PER_WEEK);
+	if (weeks > 0) {
+		date %= SECONDS_PER_WEEK;
+		let weeks_unit = document.getElementById('weeks-unit');
+		if (weeks_unit == null) {
+			weeks_block = createTimeBlock('weeks', addLeadingZero(weeks));
+			let hours_block = document.getElementById('hours-unit').parentElement;
+			hours_block.before(weeks_block);
+		}
+		else weeks_unit.innerHTML = addLeadingZero(weeks);
+	}
+	else removeTimeBLock('weeks');
+
+	let days = Math.floor(date / SECONDS_PER_DAY);
+	if (days > 0) {
+		let days_unit = document.getElementById('days-unit');
+		if (days_unit == null) {
+			days_block = createTimeBlock('days', addLeadingZero(days));
+			let hours_block = document.getElementById('hours-unit').parentElement;
+			hours_block.before(days_block);
+		}
+		else days_unit.innerHTML = addLeadingZero(days);
+	}
+	else removeTimeBLock('days');
 
 	let hours = Math.floor(time_of_day / SECONDS_PER_HOUR);
 	if (hours > 0) time_of_day %= SECONDS_PER_HOUR;
