@@ -67,6 +67,7 @@ document.getElementById('btn-start').onclick = function startCountdownTimer() {
 		tickCountdown();
 	}
 	else {
+		resetDisplay();
 		btnStart.value = 'Start';
 		targetDate.disabled = targetTime.disabled = false;
 	}
@@ -94,6 +95,7 @@ document.getElementById('btn-start').onclick = function startCountdownTimer() {
 }
 
 function tickCountdown() {
+	if (document.getElementById('btn-start').value === 'Start') return;
 	let now = new Date();
 
 	let targetDateControl = document.getElementById('target-date');
@@ -235,3 +237,9 @@ function removeTimeBlock(name) {
 	}
 }
 
+function resetDisplay() {
+	let display = document.getElementById('display');
+	while (display.children[0].children[0].id != "hours-unit") {
+		display.children[0].remove();
+	}
+}
