@@ -243,3 +243,51 @@ function resetDisplay() {
 		display.children[0].remove();
 	}
 }
+
+//HW_player////////////////////////////////////////////////////////////////////////////////////////////////////////////
+document.getElementById('folder-input').onchange = function() {
+	let fileSelect = document.getElementById('file-select');
+	let noFiles = document.getElementById('no-files');
+	let player = document.getElementById('player');
+	let input = document.getElementById('folder-input');
+
+	fileSelect.innerHTML = '<option value="">Сначала выберите папку...</option>';
+	fileSelect.disabled = true;
+	noFiles.style.display = 'block';
+	player.src = '';
+
+	let files = Array.from(input.files);
+
+	let mp3Files = files.filter(file => {
+		return !file.webkitRelativePath.endsWith('/') &&
+			file.name.toLowerCase().endsWith('.mp3');
+	});
+
+	if (mp3Files.length === 0) {
+		noFiles.style.display = 'block';
+		return;
+	}
+
+	fileSelect.disabled = false;
+	noFiles.style.display = 'none';
+
+	mp3Files.forEach(file => {
+		let option = document.createElement('option');
+		option.value = URL.createObjectURL(file);
+		option.textContent = file.name;
+		fileSelect.appendChild(option);
+	});
+
+	if (fileSelect.options.length > 1) {
+		fileSelect.selectedIndex = 1;
+		player.src = fileSelect.value;
+	}
+}
+
+document.getElementById('file-select').onchange = function() {
+	let fileSelect = document.getElementById('file-select');
+	if (fileSelect.value) {
+		player.src = fileSelect.value;
+		player.play();
+    }
+}

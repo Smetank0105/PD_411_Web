@@ -122,8 +122,17 @@
 	</div>
 	<div>
 		<audio controls id="player" style="width:100%">
-			<source src="musik/sound.mp3"/>
+			<source src="musik/sound.mp3" />
 		</audio>
+		<h2>Выберите папку с MP3-файлами</h2>
+		<input type="file" id="folder-input" webkitdirectory directory multiple />
+		<div class="select-container">
+			<label for="file-select">Выберите MP3-файл:</label>
+			<select id="file-select" disabled>
+				<option value="">Сначала выберите папку...</option>
+			</select>
+			<p id="no-files" class="no-files">Нет MP3-файлов в выбранной папке.</p>
+		</div>
 	</div>
 	<script src="functions.js"></script>
 </body>
