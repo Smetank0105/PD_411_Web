@@ -1,13 +1,14 @@
 // JavaScript source code
+var id = null;
 function Move() {
-	let id = null;
 	const elem = document.getElementById('animation');
 	let x_pos = 0;
 	let y_pos = 0;
 	let x_shift = 1;
 	let y_shift = 1;
-	//let interval = document.getElementById('interval').value;
-	id = setInterval(frame, 15);
+	let interval = document.getElementById('interval').value;
+	clearInterval(id);
+	id = setInterval(frame, interval);
 	function frame() {
 
 		x_pos += x_shift;
@@ -18,6 +19,5 @@ function Move() {
 		if (x_pos == 350) x_shift = -1;
 		if (y_pos == 0) y_shift = 1;
 		if (y_pos == 250) y_shift = -1;
-
 	}
 }
