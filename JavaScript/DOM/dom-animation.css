@@ -13,3 +13,16 @@
 	background:red;
 	color:yellow;
 }
+
+/*@keyframes MyAnim{
+	from{
+		margin-left:0px;
+	}
+	to{
+		margin-left: 250px;
+	}
+}
+
+div{
+	animation: MyAnim 5s linear alternate infinite;
+}*/
