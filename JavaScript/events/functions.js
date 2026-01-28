@@ -244,7 +244,7 @@ function resetDisplay() {
 	}
 }
 
-//HW_player////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//HW_player
 document.getElementById('folder-input').onchange = function() {
 	let fileSelect = document.getElementById('file-select');
 	let noFiles = document.getElementById('no-files');
