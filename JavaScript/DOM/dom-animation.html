@@ -2,16 +2,15 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="utf-8" />
-	<title>DOM ANIME</title>
-	<link rel="stylesheet" href="dom-animation.css" />
+    <meta charset="utf-8" />
+    <title>DOM ANIME</title>
+    <link rel="stylesheet" href="dom-animation.css" />
 </head>
 <body>
-	<h1>Document Object Model Animation</h1>
-	<div id="container" onclick="Move()">
-		<div id="animation">Document Object Model Animation</div>
-	</div>
-	<input type="number" id="interval" min="1" max="60" value="5"/><label for="interval">Interval</label>
-	<script src="dom-animation.js"></script>
+    <h1>Document Object Model Animation</h1>
+    <input type="number" id="interval" min="1" max="60" value="5" onchange="Move()" /><label for="interval">Interval</label>
+    <input type="number" id="font-size" min="32" max="256" value="32" step="4" onchange="setFontSize()" /><label for="font-size">Font size</label>
+    <div id="animation"><span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span></div>
+    <script src="dom-animation.js"></script>
 </body>
 </html>
