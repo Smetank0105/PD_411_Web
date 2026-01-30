@@ -1,0 +1,19 @@
+﻿body {
+}
+
+.block {
+	width:1000px;
+	border:solid 1px;
+	display:flex;
+	justify-content:space-between;
+	font-size:32px;
+	text-wrap:nowrap;
+}
+
+.block > div{
+	align-content:center;
+}
+button{
+	width:128px;
+	height:60px;
+}

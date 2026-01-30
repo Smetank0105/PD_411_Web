@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>BOM</title>
+	<link rel="stylesheet" href="bom.css" />
+</head>
+<body>
+	<h1>Browser Object Model</h1>
+	<h2>Window</h2>
+	<div class="block">
+		<div id="window-size">Размер окна браузера:</div>
+		<button onclick="getWindowSize()">Определить</button>
+	</div>
+	<h2>Screen</h2>
+	<div class="block" style="align-items:center;">
+		<div>
+			<div>Разрешение экрана:<span id="screen-resolution"></span></div>
+			<div>Доступное разрешение:<span id="screen-available-resolution"></span></div>
+			<div>Глубина цвета:<span id="color-depth"></span></div>
+			<div>Pixel depth:<span id="pixel-depth"></span></div>
+		</div>
+		<button onclick="getScreenProperties()">Определить</button>
+	</div>
+	<h2>Location</h2>
+	<div class="block" style="align-items:center;">
+		<div>
+			<div>HREF:<span id="bom-href"></span></div>
+			<div>Hostname:<span id="bom-hostname"></span></div>
+			<div>Pathname:<span id="bom-pathname"></span></div>
+			<div>Protocol:<span id="bom-protocol"></span></div>
+			<div>Port:<span id="bom-port"></span></div>
+		</div>
+		<button onclick="getLocation()">Определить</button>
+	</div>
+	<h3>BOM Assign</h3>
+	<div class="block" style="align-items:center;">
+		<input id="bom-url" type="text" style="width:800px;height:50px;font-size:24px;text-align:center"/>
+		<button onclick="goTo()">Перейти</button>
+	</div>
+	<script src="bom.js"></script>
+</body>
+</html>
