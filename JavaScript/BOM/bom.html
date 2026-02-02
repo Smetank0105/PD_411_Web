@@ -39,6 +39,18 @@
 		<input id="bom-url" type="text" style="width:800px;height:50px;font-size:24px;text-align:center"/>
 		<button onclick="goTo()">Перейти</button>
 	</div>
+	<hr />
+	<h3>Navigator</h3>
+	<div>
+		<div id="navigator">
+		</div>
+		<button onclick="document.getElementById('navigator').innerHTML = navigator.language;">Определить</button>
+	</div>
+	<h3>History</h3>
+	<div style="display:flex; justify-content:space-between;">
+		<button onclick="history.back()">Назад</button>
+		<button onclick="history.forward()">Вперед</button>
+	</div>
 	<script src="bom.js"></script>
 </body>
 </html>
